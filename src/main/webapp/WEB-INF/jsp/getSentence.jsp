@@ -21,10 +21,10 @@
 
 	<h1>insert text</h1>
 
-	<form name="voca" action="set">
+	<form name="voca" action="set" method="post">
 		<textarea name="voca" class="form-control" rows="20">
 		</textarea>
-		<a href="#" onclick="voca.submit()">변환</a>
+		<a href="#" onclick="voca.submit()">translate</a>
 	</form>
 	
 	<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->

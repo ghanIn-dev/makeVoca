@@ -1,6 +1,7 @@
 package makeVoca;
 
 import java.util.List;
+import java.util.StringTokenizer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,16 +23,25 @@ public class vocaController {
 	
 	@RequestMapping(value="/set")
 	public String setVoca(ModelMap map, @ModelAttribute vocaVO vo){
-		
-		stringToken stringToken = new stringToken();
-		
-		String sentence = vo.getVoca();
-		List<?> vocaList = stringToken.makeList(sentence);	
 
-		map.addAttribute("vocaList",vocaList);
+		String sentence = vo.getVoca();
+					
+		StringTokenizer st = new StringTokenizer(sentence);
 		
-		vocaservice.insert(vo);
+		while(st.hasMoreTokens()){	
+			vocaservice.insert(st.nextToken());
+		}
 			
+		return "redirect:/view";		
+	}
+	
+	
+	@RequestMapping(value="/view")
+	public String viewVoca(ModelMap map){
+		
+		List<?> viewword = vocaservice.vocaList();
+		map.addAttribute("viewword",viewword);	
+		
 		return "/viewWord";		
 	}
 	

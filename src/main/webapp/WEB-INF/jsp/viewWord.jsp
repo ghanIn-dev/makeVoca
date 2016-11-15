@@ -33,7 +33,7 @@
 			<td>VOCA</td>
 		</tr>
 
-		<c:forEach var="vocaList" items="${vocaList}" varStatus="varStatus">
+		<c:forEach var="vocaList" items="${viewword}" varStatus="varStatus">
 			<tr>
 				<td>${vocaList.voca}</td>
 			</tr>

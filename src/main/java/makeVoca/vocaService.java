@@ -1,5 +1,7 @@
 package makeVoca;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,11 +10,17 @@ import org.springframework.stereotype.Service;
 public class vocaService {
 	
 	@Autowired
-	SqlSessionTemplate sqlSession;
+	private SqlSessionTemplate sqlSession;
 
-	public int insert(vocaVO vo) {
+	public int insert(String string) {
 		// TODO Auto-generated method stub
-		return sqlSession.insert("insertVoca", vo);
+		return sqlSession.insert("insertVoca", string);
 	}
+
+	public List<?> vocaList() {
+		// TODO Auto-generated method stub
+		return sqlSession.selectList("selectList");
+	}
+	
 
 }

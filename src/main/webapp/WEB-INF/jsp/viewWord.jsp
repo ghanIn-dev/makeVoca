@@ -36,6 +36,7 @@
 		<c:forEach var="vocaList" items="${viewword}" varStatus="varStatus">
 			<tr>
 				<td>${vocaList.voca}</td>
+				<td>${vocaList.mean}</td>
 			</tr>
 		</c:forEach>
 

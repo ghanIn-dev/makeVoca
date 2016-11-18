@@ -7,6 +7,7 @@
 
 		SELECT VOCA, MEAN
 		FROM VOCA
+		GROUP BY VOCA
 
 	</select>
 

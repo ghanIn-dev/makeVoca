@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
-<title>부트스트랩 101 템플릿</title>
+<title>ViewWord</title>
 
 <!-- 합쳐지고 최소화된 최신 CSS -->
 <link rel="stylesheet"
@@ -24,24 +24,25 @@
 <body>
 
 
-	<h1>insert text</h1>
+	<h1>Output</h1>
 
+	<div class = container>
+		<table class="table">
 
-	<table class="table">
-
-		<tr>
-			<td>VOCA</td>
-		</tr>
-
-		<c:forEach var="vocaList" items="${viewword}" varStatus="varStatus">
 			<tr>
-				<td>${vocaList.voca}</td>
-				<td>${vocaList.mean}</td>
+				<td align="center" >VOCA</td>
 			</tr>
-		</c:forEach>
+
+			<c:forEach var="vocaList" items="${viewword}" varStatus="varStatus">
+				<tr>
+					<td>${vocaList.voca}</td>
+					<td>${vocaList.mean}</td>
+				</tr>
+			</c:forEach>
 
 
-	</table>
+		</table>
+	</div>
 
 
 

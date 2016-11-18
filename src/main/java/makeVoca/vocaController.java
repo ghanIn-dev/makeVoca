@@ -26,6 +26,8 @@ public class vocaController {
 	
 		String sentence = vo.getVoca(); //입력 문장		
 		FetchMeanings meanings = new FetchMeanings(); // 사전함수 초기화
+		replaceVoca replaceVoca = new replaceVoca(); // 문장 정리 함수 초기화
+		sentence = replaceVoca.reVoca(sentence); // 문장 정리
 		StringTokenizer st = new StringTokenizer(sentence); // 입력 문장을 단어로 분해
 				
 				

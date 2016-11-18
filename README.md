@@ -9,7 +9,7 @@
 
 1. eclipse - file - import - project from git - clone uri - uri:https://github.com/ghanIn/makeVoca.git - import existing eclipse projects
 
-2. DB
+2. DB (MariaDB)
 	
 	CREATE TABLE VOCA(
 

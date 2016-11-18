@@ -10,6 +10,7 @@ public class replaceVoca {
 		word = word.replace("-" , "");
 		word = word.replace("," , "");
 		word = word.replace(":" , "");
+		word = word.replace("!" , "");
 		
 		
 		return word;

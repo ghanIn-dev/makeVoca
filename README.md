@@ -18,6 +18,8 @@
 
 	);
 
+
+
 3. applicationContext.xml 에서 본인의 데이터베이스로 설정변경
 
 

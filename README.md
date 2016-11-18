@@ -11,12 +11,12 @@
 
 2. DB
 	
-CREATE TABLE VOCA(
+	CREATE TABLE VOCA(
 
-VOCA VARCHAR (80),
-MEAN VARCHAR (100)
+	VOCA VARCHAR (80),
+	MEAN VARCHAR (100)
 
-);
+	);
 
 3. applicationContext.xml 에서 본인의 데이터베이스로 설정변경
 

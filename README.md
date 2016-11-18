@@ -22,6 +22,8 @@ https://ko.glosbe.com/
 
 3. applicationContext.xml 에서 본인의 데이터베이스로 설정변경
 
+4. 톰캣 서버 실행 후 localhost:8080/makeVoca/get
+
 
 추가할 기능
 

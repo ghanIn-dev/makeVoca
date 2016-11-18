@@ -13,7 +13,7 @@
 	
 	CREATE TABLE VOCA(
 
-	VOCA VARCHAR (80), // 단
+	VOCA VARCHAR (80), // 
 	MEAN VARCHAR (100) // 
 
 	);

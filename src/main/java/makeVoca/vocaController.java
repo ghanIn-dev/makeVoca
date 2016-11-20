@@ -26,12 +26,12 @@ public class vocaController {
 	public String setVoca(ModelMap map, @ModelAttribute vocaVO vo){
 	
 		String sentence = vo.getVoca(); //입력 문장		
-		FetchMeanings meanings = new FetchMeanings(); // 사전함수 초기화
-		replaceVoca replaceVoca = new replaceVoca(); // 문장 정리 함수 초기화
+		FetchMeanings meanings = new FetchMeanings(); // 사전 클래스 초기화
+		replaceVoca replaceVoca = new replaceVoca(); // 문장 정리 클래스 초기화
 		sentence = replaceVoca.reVoca(sentence); // 문장 정리
 		StringTokenizer st = new StringTokenizer(sentence); // 입력 문장을 단어로 분해
 				
-		List listA = new ArrayList();
+		//List listA = new ArrayList();
 				
 		while(st.hasMoreTokens()){	// 분해한 단어의 갯수 만큼
 			
@@ -40,14 +40,14 @@ public class vocaController {
 
 			vo.setVoca(voca);
 			vo.setMean(meanfind);
-			listA.add(vo);
-			//vocaservice.insert(vo);
+			//listA.add(vo);
+			vocaservice.insert(vo);
 					
 		}
 			 
-		map.addAttribute("viewword",listA);	
-		return "/viewWord";	
-		//return "redirect:/view";		
+/*		map.addAttribute("viewword",listA);	
+		return "/viewWord";	*/
+		return "redirect:/view";		
 	}
 	
 	

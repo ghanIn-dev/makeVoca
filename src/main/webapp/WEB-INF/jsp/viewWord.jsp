@@ -24,7 +24,7 @@
 <body>
 
 
-	<h1>Output ec2 jenkins test1</h1>
+	<h1>Output ec2 jenkins test2</h1>
 
 		<div class=container>
 			<table class="table">

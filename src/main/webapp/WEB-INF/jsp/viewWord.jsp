@@ -24,7 +24,7 @@
 <body>
 
 
-	<h1>Output jenkins check 123456</h1>
+	<h1>Output ec2 jenkins test</h1>
 
 		<div class=container>
 			<table class="table">

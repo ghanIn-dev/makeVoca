@@ -24,7 +24,7 @@
 <body>
 
 
-	<h1>Output jenkins check</h1>
+	<h1>Output jenkins check 1</h1>
 
 		<div class=container>
 			<table class="table">

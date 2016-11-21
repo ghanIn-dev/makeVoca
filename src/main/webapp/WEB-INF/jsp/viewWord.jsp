@@ -26,23 +26,33 @@
 
 	<h1>Output</h1>
 
-	<div class = container>
-		<table class="table">
+		<div class=container>
+			<table class="table">
 
-			<tr>
-				<td align="center" >VOCA</td>
-			</tr>
-
-			<c:forEach var="vocaList" items="${viewword}" varStatus="varStatus">
 				<tr>
-					<td>${vocaList.voca}</td>
-					<td>${vocaList.mean}</td>
+					<td align="center">영어</td>
+					<td align="center">뜻</td>
+					<td align="center">중복</td>
+					<td align="center"></td>
+
 				</tr>
-			</c:forEach>
+
+					<c:forEach var="vocaList" items="${viewword}" varStatus="varStatus">
+					<tr>
+						<td align="center">${vocaList.voca}</td>
+						<td align="center">${vocaList.mean}</td>
+						<td align="center">${vocaList.count}</td>
+					
+					
+						<td align="center"><a href="del?voca=<c:out value="${vocaList.voca}"/>"><span
+								class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+					</tr>
+				</c:forEach>
 
 
-		</table>
-	</div>
+			</table>
+		</div>
+
 
 
 

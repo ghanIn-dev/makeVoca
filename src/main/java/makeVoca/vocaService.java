@@ -28,6 +28,11 @@ public class vocaService {
 		return sqlSession.insert("insertMean", mean);
 				
 	}
+
+	public int deleteWord(String delWord) {
+		// TODO Auto-generated method stub
+		return sqlSession.delete("deleteWord", delWord);
+	}
 	
 
 }

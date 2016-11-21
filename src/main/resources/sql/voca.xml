@@ -4,18 +4,23 @@
 <mapper namespace="makeVoca">
 
 	<select id="selectList" resultType="makeVoca.vocaVO">
-
-		SELECT VOCA, MEAN
+		SELECT VOCA, MEAN, COUNT(*)
+		AS COUNT
 		FROM VOCA
+		WHERE DELFLAG="N"
 		GROUP BY VOCA
-
 	</select>
 
 	<insert id="insertVoca" parameterType="makeVoca.vocaVO">
-
-		INSERT INTO VOCA (VOCA,MEAN)
-		VALUES (#{voca},#{mean})
-
+		INSERT INTO VOCA
+		(VOCA,MEAN,DELFLAG)
+		VALUES (#{voca},#{mean},"N")
 	</insert>
+
+	<delete id="deleteWord" parameterType="makeVoca.vocaVO">
+		UPDATE VOCA
+		SET DELFLAG='Y'
+		WHERE VOCA=#{VOCA}
+	</delete>
 
 </mapper>

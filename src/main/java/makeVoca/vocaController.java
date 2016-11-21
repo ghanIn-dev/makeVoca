@@ -1,6 +1,5 @@
 package makeVoca;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -16,12 +15,13 @@ public class vocaController {
 	@Autowired
 	vocaService vocaservice;
 	
+	// 문장 입력
 	@RequestMapping(value="/get")
 	public String getSetence(){
 			
 		return "/getSentence";		
 	}
-	
+	// 문장을 단어로 분류한 후 db에 저장
 	@RequestMapping(value="/set")
 	public String setVoca(ModelMap map, @ModelAttribute vocaVO vo){
 	
@@ -50,7 +50,7 @@ public class vocaController {
 		return "redirect:/view";		
 	}
 	
-	
+	//리스트 출력
 	@RequestMapping(value="/view")
 	public String viewVoca(ModelMap map){
 		
@@ -59,6 +59,17 @@ public class vocaController {
 		map.addAttribute("viewword",viewword);	
 		
 		return "/viewWord";		
+	}
+	
+	//삭제
+	@RequestMapping(value= "/del")
+	public String delVoca(@ModelAttribute vocaVO vo){
+		
+		String delWord = vo.getVoca();
+		
+		vocaservice.deleteWord(delWord);
+		
+		return "redirect:/view";	
 	}
 	
 }

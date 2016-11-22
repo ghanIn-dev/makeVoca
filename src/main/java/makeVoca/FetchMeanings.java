@@ -1,8 +1,5 @@
 package makeVoca;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.nullValue;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
